@@ -34,12 +34,12 @@ class MainActivity : AppCompatActivity() {
     private fun requestNeededPermission() {
         if (
             ContextCompat.checkSelfPermission(this,
-                Manifest.permission.PROCESS_OUTGOING_CALLS) != PackageManager.PERMISSION_GRANTED
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED
             ) {
 
             ActivityCompat.requestPermissions(this,
                 arrayOf(
-                    Manifest.permission.PROCESS_OUTGOING_CALLS,
+                    Manifest.permission.CALL_PHONE,
                 ),
                 101)
         }

@@ -35,7 +35,8 @@ class CallAdapter(callList: List<Call>) : RecyclerView.Adapter<CallAdapter.ViewH
         holder.btnCall.setOnClickListener {
           //tel:44535
             val context = holder.btnCall.context
-            val intentPackage = Intent(Intent.ACTION_DIAL, Uri.parse("tel:${holder.tvPhonenumber.text}"))
+
+            val intentPackage = Intent(Intent.ACTION_CALL, Uri.parse("tel:${holder.tvPhonenumber.text}"))
             context.startActivity(intentPackage)
 
         }
